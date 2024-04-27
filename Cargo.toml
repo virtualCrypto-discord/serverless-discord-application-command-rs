@@ -1,0 +1,13 @@
+[workspace]
+
+members = ["crates/*"]
+resolver = "2"
+
+[workspace.dependencies]
+serverless-discord-interactions = { path = "./crates/serverless-discord-interactions" }
+serverless-discord-interactions-base = { path = "./crates/serverless-discord-interactions-base" }
+serverless-discord-interactions-cloudflare-backend = { path = "./crates/serverless-discord-interactions-cloudflare-backend" }
+serde = { features = ["derive"], version = "^1.0.199" }
+thiserror = "1.0.59"
+anyhow = "1.0.82"
+twilight-model = "0.15.4"

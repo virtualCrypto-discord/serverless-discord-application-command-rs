@@ -1,0 +1,17 @@
+[package]
+name = "serverless-discord-interactions-cloudflare-backend"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+reqwest = { version = "0.12.4", features = ["multipart"] }
+serverless-discord-interactions-base = { workspace = true }
+serde = { workspace = true }
+serde_json = "^1.0.116"
+percent-encoding = "2.3.1"
+anyhow = { workspace = true }
+ed25519-dalek = "2.1.1"
+worker = "0.1.0"
+hex = "0.4.3"
