@@ -84,7 +84,7 @@ pub trait REST {
         method: RequestMethod,
         route: RouteLike,
         data: RequestData<T>,
-    ) -> impl Future<Output = Result<Vec<u8>, RESTError>> + Send
+    ) -> impl Future<Output = Result<Vec<u8>, RESTError>>
     where
         T: Serialize + Send;
     fn request_json<T, R>(
@@ -92,7 +92,7 @@ pub trait REST {
         method: RequestMethod,
         route: RouteLike,
         data: RequestData<T>,
-    ) -> impl Future<Output = Result<R, RESTError>> + Send
+    ) -> impl Future<Output = Result<R, RESTError>>
     where
         T: Serialize + Send,
         R: for<'a> Deserialize<'a> + Send;
