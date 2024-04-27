@@ -1,3 +1,5 @@
+pub use serverless_discord_interactions_base::interaction::InteractionHandler;
+pub use serverless_discord_interactions_base::twilight_model;
 pub use serverless_discord_interactions_base::rest;
 
 use serverless_discord_interactions_base::rest::AuthPrefix;
@@ -30,3 +32,4 @@ pub fn rest_client<'a>(config: RESTConfig<'a>) -> impl rest::REST + 'a {
     } = config;
     backend::REST::new(api, version, token, auth_prefix)
 }
+
