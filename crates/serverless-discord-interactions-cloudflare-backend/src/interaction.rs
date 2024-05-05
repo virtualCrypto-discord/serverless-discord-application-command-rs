@@ -17,7 +17,7 @@ impl<T: InteractionHandler> RequestProcessor<T> {
     pub fn new(vk: VerifyingKey, handler: T) -> Self {
         Self { vk, handler }
     }
-    pub async fn process_request(&mut self, mut req: Request) -> anyhow::Result<Response> {
+    pub async fn process_request(self, mut req: Request) -> anyhow::Result<Response> {
         let sign = req
             .headers()
             .get("X-Signature-Ed25519")?
